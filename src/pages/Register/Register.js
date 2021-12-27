@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
 
-const Login = () => {
+const Register = () => {
     return (
         <Container>
             <Row>
@@ -11,4 +10,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;
