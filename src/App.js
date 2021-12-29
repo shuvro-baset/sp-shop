@@ -4,9 +4,10 @@ import Footer from './components/Footer/Footer';
 import NavBar from './components/NavBar/NavBar';
 import Cart from './pages/Cart/Cart';
 import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
 import Shop from './pages/Shop/Shop';
 import SingleProduct from './pages/SingleProduct/SingleProduct';
-
+import Register from './pages/Register/Register';
 
 function App() {
   return (
@@ -23,11 +24,21 @@ function App() {
             <Route path="/shop">
               <Shop></Shop>
             </Route>
-            <Route path="/single-product">
+            
+            <Route path="/shop/:category">
+              <Shop></Shop>
+            </Route>
+            <Route path="/product/:id">
               <SingleProduct></SingleProduct>
             </Route>
             <Route path="/cart">
               <Cart></Cart>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/register">
+              <Register></Register>
             </Route>
             
           </Switch>
