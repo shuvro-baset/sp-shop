@@ -64,7 +64,7 @@ const Shop = () => {
                     )
                 }
             </Row> */}
-            <Products cat={cat} filters={filters} sort={sort} />
+            <Products />
         </Container>
     );
 };
