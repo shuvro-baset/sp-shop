@@ -4,34 +4,32 @@ import {  Container, Row } from 'react-bootstrap';
 import {categories} from '../../data';
 import Product from '../Product/Product';
 
-const Products = ({cat, filters, sort}) => {
-    console.log(cat, filters, sort);
+const Products = () => {
     const [products, setProducts] = useState([]);
-    const [filterProducts, setFilterProducts] = useState([]);
 
     useEffect(() => {
         const getProducts = async () => {
             console.log("alkdsf");
             try {
-                const res = await axios.get(
-                    cat 
-                    ? `http://localhost:5000/api/products?category=${cat}`
-                    : "http://localhost:5000/api/products/"
+                const res = await axios.get("http://localhost:5000/api/products/"
                     )
                     console.log(res.data);
+                    setProducts(res.data);
             } catch (err) {
                 console.log(err);
             }
         };
         getProducts();
-    }, [cat])
+    }, []);
+
+
     return (
         <Container>
             <Row>
                 {
-                    categories.map(product => 
+                    products.map(product => 
                         <Product 
-                            key={product.id}
+                            key={product._id}
                             product={product}
                         ></Product>
                     )
