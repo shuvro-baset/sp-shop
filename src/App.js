@@ -26,9 +26,6 @@ function App() {
               <Shop></Shop>
             </Route>
             
-            <Route path="/shop/:category">
-              <Shop></Shop>
-            </Route>
             <Route path="/product/:id">
               <SingleProduct></SingleProduct>
             </Route>
