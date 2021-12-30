@@ -8,6 +8,7 @@ import Login from './pages/Login/Login';
 import Shop from './pages/Shop/Shop';
 import SingleProduct from './pages/SingleProduct/SingleProduct';
 import Register from './pages/Register/Register';
+import Products from './components/Products/Products';
 
 function App() {
   return (

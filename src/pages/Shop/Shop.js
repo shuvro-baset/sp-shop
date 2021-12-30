@@ -13,7 +13,7 @@ const Shop = () => {
 
     const [filters, setFilters] = useState({})
     const [sort, setSort] = useState("newest")
-
+ 
     const handleFilter = (e) => {
         const value = e.target.value;
         setFilters({
