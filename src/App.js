@@ -7,7 +7,18 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 
+import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { getPosts } from './actions/posts'
 function App() {
+
+  const [currentId, setCurrentId] = useState(0);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [currentId, dispatch]);
+
   return (
     <>
       <Router>
